@@ -1,0 +1,119 @@
+body { font-family: 'Poppins', sans-serif; }
+
+        /* Hero carousel */
+        .hero-carousel .carousel-item {
+            height: 90vh;
+            min-height: 450px;
+        }
+        .hero-carousel .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(55%);
+        }
+        .hero-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            width: 90%;
+            z-index: 5;
+        }
+        .hero-caption h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hero-caption p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-coffee {
+            background-color: #6f4e37;
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+        }
+        .btn-coffee:hover {
+            background-color: #543a29;
+            color: #fff;
+        }
+
+        /* Menu section */
+        .menu-section {
+            padding: 80px 0;
+            background-color: #f5efe4;
+        }
+        .menu-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            font-weight: 700;
+            font-size: 2.6rem;
+        }
+        .menu-cat-card {
+            border: 1px solid #e6ddcf;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+        .menu-cat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .menu-cat-card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        .menu-cat-card .card-title {
+            color: #3e2723;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Our Story section */
+        .story-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        .story-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            font-weight: 700;
+        }
+        .story-section p {
+            line-height: 1.8;
+        }
+        .menu-card img {
+            height: 190px;
+            object-fit: cover;
+        }
+        .menu-card .price {
+            color: #6f4e37;
+            font-weight: 600;
+        }
+
+        /* Category pills */
+        .menu-pills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 45px;
+        }
+        .menu-pills .nav-link {
+            color: #4b3621;
+            border: 1px solid #d7ccc8;
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 0.92rem;
+        }
+        .menu-pills .nav-link.active {
+            background-color: #6f4e37 !important;
+            color: #fff !important;
+            border-color: #6f4e37;
+        }
+
+        footer a { color: #d7ccc8; text-decoration: none; }
