@@ -1,0 +1,359 @@
+body { font-family: 'Poppins', sans-serif; }
+
+        /* Hero carousel */
+        .hero-carousel .carousel-item {
+            height: 90vh;
+            min-height: 450px;
+        }
+        .hero-carousel .carousel-item img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            filter: brightness(55%);
+        }
+        .hero-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            width: 90%;
+            z-index: 5;
+        }
+        .hero-caption h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hero-caption p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-coffee {
+            background-color: #6f4e37;
+            color: #fff;
+            border: none;
+            padding: 10px 28px;
+        }
+        .btn-coffee:hover {
+            background-color: #543a29;
+            color: #fff;
+        }
+
+        /* Menu section */
+        .menu-section {
+            padding: 80px 0;
+            background-color: #f5efe4;
+        }
+        .menu-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            font-weight: 700;
+            font-size: 2.6rem;
+        }
+        .menu-cat-card {
+            border: 1px solid #e6ddcf;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+        .menu-cat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .menu-cat-card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        .menu-cat-card .card-title {
+            color: #3e2723;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Our Story section */
+        .story-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        .story-section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #3e2723;
+            font-weight: 700;
+        }
+        .story-section p {
+            line-height: 1.8;
+        }
+        footer a { color: #d7ccc8; text-decoration: none; }
+
+/* Auth pages (Login / Signup) */
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5efe4;
+    padding: 40px 20px;
+}
+.auth-card {
+    background-color: #fff;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+.auth-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #3e2723;
+}
+.auth-card a {
+    color: #6f4e37;
+    text-decoration: none;
+    font-weight: 600;
+}
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Admin Dashboard ===== */
+.admin-layout {
+    background-color: #f5efe4;
+}
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.admin-body {
+    display: flex;
+}
+.admin-sidebar {
+    width: 240px;
+    background-color: #fff;
+    border-right: 1px solid #e6ddcf;
+    min-height: calc(100vh - 56px);
+    padding: 15px 0;
+    flex-shrink: 0;
+}
+.admin-sidebar-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.92rem;
+    color: #4b3621;
+    border-left: 3px solid transparent;
+}
+.admin-sidebar-link:hover {
+    background-color: #f5efe4;
+}
+.admin-sidebar-link.active {
+    background-color: #f5efe4;
+    border-left: 3px solid #6f4e37;
+    font-weight: 600;
+    color: #3e2723;
+}
+.admin-content {
+    flex: 1;
+    padding: 30px 40px;
+}
+.admin-card {
+    max-width: 700px;
+    background-color: #fff;
+    border: 1px solid #e6ddcf;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+}
+.admin-card table {
+    margin-bottom: 0;
+}
+
+/* Admin top navbar links */
+.admin-nav-links {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+.admin-nav-link {
+    color: #d7ccc8;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.admin-nav-link:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,0.08);
+}
+.admin-nav-link.active {
+    color: #fff;
+    background-color: #6f4e37;
+    font-weight: 600;
+}
+
+/* Admin top navbar — button-based (single page, no URL change) */
+.admin-nav-link-btn {
+    color: #d7ccc8;
+    background: none;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+.admin-nav-link-btn:hover {
+    color: #fff;
+    background-color: rgba(255,255,255,0.08);
+}
+.admin-nav-link-btn.active {
+    color: #fff;
+    background-color: #6f4e37;
+    font-weight: 600;
+}
+
+/* ===== Footer (3-column style) ===== */
+.site-footer {
+    background-color: #212529;
+    color: #d7ccc8;
+    padding: 45px 0 20px;
+}
+.site-footer h5 {
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.site-footer a {
+    color: #d7ccc8;
+    text-decoration: none;
+}
+.site-footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-line {
+    border-color: rgba(255,255,255,0.15);
+    margin: 25px 0 15px;
+}
+
+/* Delete confirmation warning box */
+.delete-warning {
+    background-color: #f8d7e0;
+    color: #6f1d3b;
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Page wrapper — footer hamesha bottom pe rehta hai, chahe content chhota ho */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.page-wrapper .auth-page,
+.page-wrapper .admin-layout {
+    flex: 1;
+}
+
+/* ===== Admin Login — Payoneer-style split screen ===== */
+.auth-split-page {
+    min-height: 100vh;
+}
+.auth-split-form {
+    max-width: 460px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+.auth-split-title {
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+.auth-split-subtitle {
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+.auth-split-input {
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1.5px solid #d1d5db;
+    font-size: 1rem;
+}
+.auth-split-input:focus {
+    border-color: #6f4e37;
+    box-shadow: 0 0 0 3px rgba(111,78,55,0.1);
+}
+.auth-split-eye-btn {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+.auth-split-link {
+    color: #6f4e37;
+    font-weight: 600;
+    text-decoration: none;
+}
+.auth-split-link:hover {
+    text-decoration: underline;
+}
+.auth-split-btn {
+    background: linear-gradient(90deg, #8b5e3c, #6f4e37);
+    color: #fff;
+    font-weight: 700;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.05rem;
+}
+.auth-split-btn:hover {
+    opacity: 0.92;
+    color: #fff;
+}
+.auth-split-image-panel {
+    background: linear-gradient(135deg, #f5efe4, #e8dcc8);
+    height: 100%;
+    padding: 100px 60px 60px 60px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.auth-split-right-title {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #3e2723;
+    margin-bottom: 16px;
+}
+.auth-split-right-text {
+    color: #6b5c4d;
+    font-size: 1.05rem;
+    max-width: 380px;
+    margin-bottom: 40px;
+}
+.auth-split-image {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: flex-end;
+}
+
+/* View Product result box */
+.view-result {
+    background-color: #f5efe4;
+    border: 1px solid #e6ddcf;
+    border-radius: 8px;
+    padding: 16px 20px;
+}
