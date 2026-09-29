@@ -1,32 +1,20 @@
 import { useState } from 'react';
-import Home from './pages/Home.jsx';
-import AdminLogin from './pages/AdminLogin.jsx';
-import AdminDashboard from './pages/AdminDashboard.jsx';
+import Home from './components/Home.jsx';
+import AllForms from './components/AllForms.jsx';
 
 function App() {
-  // Ye state hi decide karti hai abhi kaunsa "page" dikhana hai.
-  // URL kabhi nahi badalta — hamesha wahi ek URL rahega.
-  const [view, setView] = useState('home'); // 'home' | 'adminLogin' | 'adminDashboard'
+  const [page, setPage] = useState('home');
 
-  if (view === 'adminLogin') {
-    return (
-      <AdminLogin
-        onLoginSuccess={() => setView('adminDashboard')}
-        onBackToHome={() => setView('home')}
-      />
-    );
+  if (page === 'forms') {
+    return <AllForms onBack={() => setPage('home')} />;
   }
 
-  if (view === 'adminDashboard') {
-    return (
-      <AdminDashboard
-        onLogout={() => setView('adminLogin')}
-      />
-    );
-  }
-
-  // Default: Home page
-  return <Home onLoginClick={() => setView('adminLogin')} />;
+  return (
+    <Home
+      onLoginClick={() => setPage('forms')}
+      onFormsClick={() => setPage('forms')}
+    />
+  );
 }
 
 export default App;

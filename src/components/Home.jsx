@@ -39,7 +39,7 @@ function Home({ onLoginClick }) {
               <button className="btn btn-outline-light" type="submit">Search</button>
             </form>
 
-            {/* Login button — Link takes us to a NEW PAGE, not a modal */}
+            {/* Login button */}
             <div className="d-flex">
               <button className="btn btn-coffee" onClick={onLoginClick}>Login</button>
             </div>
@@ -56,13 +56,13 @@ function Home({ onLoginClick }) {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src="/pic1.jfif" alt="Breakfast" />
+            <img src="pic1.jfif" alt="Breakfast" />
           </div>
           <div className="carousel-item">
-            <img src="/pic2.jfif" alt="Lunch" />
+            <img src="pic2.jfif" alt="Lunch" />
           </div>
           <div className="carousel-item">
-            <img src="/pic3.png" alt="Dinner" />
+            <img src="pic3.jfif" alt="Dinner" />
           </div>
         </div>
         <div className="hero-caption">
@@ -108,7 +108,7 @@ function Home({ onLoginClick }) {
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
               <img
-                src="/mainpic.png"
+                src="mainpic.png"
                 className="img-fluid rounded shadow-sm"
                 alt="The Coffee Club interior"
               />
@@ -141,10 +141,10 @@ function Home({ onLoginClick }) {
 }
 
 const menuCategories = [
-  { name: "Seafood", img: "/seafood.jfif" },
-  { name: "Pizza", img: "/pizza.jfif" },
-  { name: "Chinese", img: "/chinese.jfif" },
-  { name: "Italian", img: "/italian.jfif" },
+  { name: "Seafood", img: "/seafood.jfif"},
+  { name: "Pizza", img: "/pizza.jfif"},
+  { name: "Chinese", img: "/chinese.jfif"},
+  { name: "Italian", img: "/italian.jfif"},
   { name: "Burgers", img: "/burger.jfif" },
   { name: "Sandwich", img: "/sandwich.jfif" },
   { name: "Desserts", img: "/dessert.jfif" },
