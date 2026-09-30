@@ -1,20 +1,11 @@
-import { useState } from 'react';
-import Home from './components/Home.jsx';
+// import Home from './components/Home.jsx';
 import AllForms from './components/AllForms.jsx';
 
 function App() {
-  const [page, setPage] = useState('home');
+  return <AllForms />;
 
-  if (page === 'forms') {
-    return <AllForms onBack={() => setPage('home')} />;
-  }
-
-  return (
-    <Home
-      onLoginClick={() => setPage('forms')}
-      onFormsClick={() => setPage('forms')}
-    />
-  );
+  // Landing page wapas chahiye to upar wali line comment karo aur ye kholo:
+  // return <Home />;
 }
 
 export default App;

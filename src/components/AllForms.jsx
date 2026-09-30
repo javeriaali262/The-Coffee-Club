@@ -12,15 +12,15 @@ import MyProfile from './forms/MyProfile';
 function AllForms({ onBack }) {
   return (
     <div className="container py-5" style={{ maxWidth: '700px' }}>
-      <button className="btn btn-dark mb-4" onClick={onBack}>← Back to Home</button>
+      {/* <button className="btn btn-dark mb-4" onClick={onBack}>← Back to Home</button> */}
 
       {/*<LoginForm /> */}
       {/* <SignupForm /> */}
       {/* <ViewProduct /> */}
-      <AddProduct /> 
+      {/* <AddProduct /> */}
       {/* <UpdateProduct /> */}
       {/* <DeleteProduct /> */}
-      {/* <Complaints /> */}
+       <Complaints />
       {/* <Membership /> */}
       {/* <MyProfile /> */}
     </div>
