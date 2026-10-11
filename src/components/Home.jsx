@@ -1,12 +1,13 @@
 import '../App.css';
+import { Link } from 'react-router-dom';
 
-function Home({ onLoginClick }) {
+function Home() {
   return (
     <>
       {/* NAVBAR */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div className="container-fluid px-4">
-          <a className="navbar-brand fw-bold" href="#">☕ The Coffee Club</a>
+          <a className="navbar-brand fw-bold" href="#home">☕ The Coffee Club</a>
           <button
             className="navbar-toggler"
             type="button"
@@ -21,16 +22,39 @@ function Home({ onLoginClick }) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#home">Home</a>
+                <Link className="nav-link active" aria-current="page" to="#home">
+                  Home
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#menu">Menu</a>
+                <Link className="nav-link" to="#menu">
+                  Menu
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#story">Our Story</a>
+                <Link className="nav-link" to="#story">
+                  Our Story
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
+                <Link className="nav-link" to="#contact">
+                  Contact
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/customer">
+                  Customer
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/rider">
+                  Rider
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/admin">
+                  Admin Dashboard
+                </Link>
               </li>
             </ul>
 
@@ -39,16 +63,12 @@ function Home({ onLoginClick }) {
               <button className="btn btn-outline-light" type="submit">Search</button>
             </form>
 
-            {/* Login button */}
-            <div className="d-flex">
-              <button className="btn btn-coffee" onClick={onLoginClick}>Login</button>
-            </div>
           </div>
         </div>
       </nav>
 
       {/* HERO CAROUSEL */}
-      <div id="heroCarousel" className="carousel slide hero-carousel" data-bs-ride="carousel">
+      <div id="home" className="carousel slide hero-carousel" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>

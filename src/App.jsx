@@ -1,11 +1,8 @@
-// import Home from './components/Home.jsx';
-import AllForms from './components/AllForms.jsx';
+import { RouterProvider } from 'react-router-dom';
+import router from './routing.jsx';
 
 function App() {
-  return <AllForms />;
-
-  // Landing page wapas chahiye to upar wali line comment karo aur ye kholo:
-  // return <Home />;
+  return <RouterProvider router={router} />;
 }
 
 export default App;
