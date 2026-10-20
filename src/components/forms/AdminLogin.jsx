@@ -27,16 +27,15 @@ function AdminLogin() {
   return (
     <div className="admin-card mx-auto mb-4" style={{ maxWidth: '500px' }}>
       <h3 className="mb-4">Admin: Login</h3>
-      <form onSubmit={handleSubmit(handleLogin)}>
+      <form noValidate onSubmit={handleSubmit(handleLogin)}>
         <div className="mb-3">
           <label htmlFor="adminLoginEmail" className="form-label">Email</label>
-          <input type="email" className="form-control" id="adminLoginEmail" placeholder="admin@coffeeclub.com" required {...register('email')} />
-          {/* Show field-specific validation errors to the user. */}
+          <input type="email" className="form-control" id="adminLoginEmail" placeholder="admin@coffeeclub.com" {...register('email')} />
           {errors.email && <div className="text-danger">{errors.email.message}</div>}
         </div>
         <div className="mb-4">
           <label htmlFor="adminLoginPassword" className="form-label">Password</label>
-          <input type="password" className="form-control" id="adminLoginPassword" placeholder="Enter your password" required {...register('password')} />
+          <input type="password" className="form-control" id="adminLoginPassword" placeholder="Enter your password" {...register('password')} />
           {errors.password && <div className="text-danger">{errors.password.message}</div>}
         </div>
         <button type="submit" className="btn btn-coffee">Login</button>

@@ -22,17 +22,16 @@ function AdminDeleteProduct() {
   return (
     <div className="admin-card mx-auto mb-4" style={{ maxWidth: '500px' }}>
       <h3 className="mb-4">Admin: Delete Product</h3>
-      <form onSubmit={handleSubmit(handleDeleteProduct)}>
-        {Object.values(errors).map((error, index) => (
-          <div className="text-danger" key={`${error.message}-${index}`} role="alert">{error.message}</div>
-        ))}
+      <form noValidate onSubmit={handleSubmit(handleDeleteProduct)}>
         <div className="mb-3">
           <label htmlFor="adminDeleteSelect" className="form-label">Select Product</label>
           <select className="form-select" id="adminDeleteSelect" aria-describedby="adminDeleteHelp" {...register('product')}>
+            <option value="">Choose a product...</option>
             <option>Margherita Pizza</option>
             <option>Cappuccino</option>
             <option>Chocolate Shake</option>
           </select>
+          {errors.product && <div className="text-danger">{errors.product.message}</div>}
           <div id="adminDeleteHelp" className="form-text">Choose the product you want to remove from the menu.</div>
         </div>
         <div className="delete-warning">⚠️ This action cannot be undone!</div>

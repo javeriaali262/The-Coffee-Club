@@ -28,25 +28,26 @@ function AdminSignup() {
   return (
     <div className="admin-card mx-auto mb-4" style={{ maxWidth: '500px' }}>
       <h3 className="mb-4">Admin: Sign Up</h3>
-      <form onSubmit={handleSubmit(handleSignup)}>
-        {Object.values(errors).map((error, index) => (
-          <div className="text-danger" key={`${error.message}-${index}`} role="alert">{error.message}</div>
-        ))}
+      <form noValidate onSubmit={handleSubmit(handleSignup)}>
         <div className="mb-3">
           <label htmlFor="adminSignupName" className="form-label">Full Name</label>
-          <input type="text" className="form-control" id="adminSignupName" required {...register('name')} />
+          <input type="text" className="form-control" id="adminSignupName" {...register('name')} />
+          {errors.name && <div className="text-danger">{errors.name.message}</div>}
         </div>
         <div className="mb-3">
           <label htmlFor="adminSignupEmail" className="form-label">Email</label>
-          <input type="email" className="form-control" id="adminSignupEmail" required {...register('email')} />
+          <input type="email" className="form-control" id="adminSignupEmail" {...register('email')} />
+          {errors.email && <div className="text-danger">{errors.email.message}</div>}
         </div>
         <div className="mb-3">
           <label htmlFor="adminSignupPassword" className="form-label">Password</label>
-          <input type="password" className="form-control" id="adminSignupPassword" name="password" minLength="8" required {...register('password')} />
+          <input type="password" className="form-control" id="adminSignupPassword" minLength="8" {...register('password')} />
+          {errors.password && <div className="text-danger">{errors.password.message}</div>}
         </div>
         <div className="mb-3">
           <label htmlFor="adminSignupConfirmPassword" className="form-label">Confirm Password</label>
-          <input type="password" className="form-control" id="adminSignupConfirmPassword" name="confirmPassword" minLength="8" required {...register('confirmPassword')} />
+          <input type="password" className="form-control" id="adminSignupConfirmPassword" minLength="8" {...register('confirmPassword')} />
+          {errors.confirmPassword && <div className="text-danger">{errors.confirmPassword.message}</div>}
         </div>
         <button type="submit" className="btn btn-coffee">Create Account</button>
       </form>

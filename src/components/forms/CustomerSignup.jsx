@@ -28,25 +28,26 @@ function CustomerSignup() {
   return (
     <div className="admin-card mx-auto mb-4" style={{ maxWidth: '500px' }}>
       <h3 className="mb-4">Customer: Sign Up</h3>
-      <form onSubmit={handleSubmit(handleSignup)}>
-        {Object.values(errors).map((error, index) => (
-          <div className="text-danger" key={`${error.message}-${index}`} role="alert">{error.message}</div>
-        ))}
+      <form noValidate onSubmit={handleSubmit(handleSignup)}>
         <div className="mb-3">
           <label htmlFor="customerSignupName" className="form-label">Full Name</label>
-          <input type="text" className="form-control" id="customerSignupName" placeholder="Enter your full name" required {...register('name')} />
+          <input type="text" className="form-control" id="customerSignupName" placeholder="Enter your full name" {...register('name')} />
+          {errors.name && <div className="text-danger">{errors.name.message}</div>}
         </div>
         <div className="mb-3">
           <label htmlFor="customerSignupEmail" className="form-label">Email</label>
-          <input type="email" className="form-control" id="customerSignupEmail" placeholder="example@gmail.com" required {...register('email')} />
+          <input type="email" className="form-control" id="customerSignupEmail" placeholder="example@gmail.com" {...register('email')} />
+          {errors.email && <div className="text-danger">{errors.email.message}</div>}
         </div>
         <div className="mb-3">
           <label htmlFor="customerSignupPassword" className="form-label">Password</label>
-          <input type="password" className="form-control" id="customerSignupPassword" placeholder="Create a password" required {...register('password')} />
+          <input type="password" className="form-control" id="customerSignupPassword" placeholder="Create a password" {...register('password')} />
+          {errors.password && <div className="text-danger">{errors.password.message}</div>}
         </div>
         <div className="mb-3">
           <label htmlFor="customerSignupConfirm" className="form-label">Confirm Password</label>
-          <input type="password" className="form-control" id="customerSignupConfirm" placeholder="Re-enter your password" required {...register('confirmPassword')} />
+          <input type="password" className="form-control" id="customerSignupConfirm" placeholder="Re-enter your password" {...register('confirmPassword')} />
+          {errors.confirmPassword && <div className="text-danger">{errors.confirmPassword.message}</div>}
         </div>
         <button type="submit" className="btn btn-coffee">Sign Up</button>
       </form>
