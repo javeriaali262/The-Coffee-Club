@@ -23,7 +23,7 @@ router.post("/customers", signupCustomer); // Handle customer signup requests.
 router.post("/customers/login", loginCustomer);
 router.post("/admins", signupAdmin);
 router.post("/admins/login", loginAdmin);
-router.put("/admins/profile", updateAdminProfile);
+router.put("/admins/profile", updateAdminProfile);//request to update admin profile
 router.post("/reservations", createReservation);
 router.post("/orders", createOrder);
 router.get("/orders", getOrders);//read
