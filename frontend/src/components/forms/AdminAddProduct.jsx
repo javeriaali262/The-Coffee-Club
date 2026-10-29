@@ -14,9 +14,9 @@ const productSchema = z.object({
 });
 
 function AdminAddProduct() {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState('');  //
   const [errorMessage, setErrorMessage] = useState('');
-  // Connect the inputs to the schema and expose any validation messages.
+  // Connect the inputs to the schema(define datatype) and expose any validation messages.
   const {
     register,
     handleSubmit,

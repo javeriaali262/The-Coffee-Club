@@ -1,5 +1,5 @@
 import Product from "../models/product.js";
-import { randomUUID } from "node:crypto";
+import { randomUUID } from "node:crypto";  
 
 export const getProducts = async (_req, res) => {
   try {
@@ -30,7 +30,7 @@ export const addProduct = async (req, res) => {
       productImage: `/uploads/${req.file.filename}`,
     });
 
-    await newProduct.save();
+    await newProduct.save();// Save the new product to the database
     res.status(201).send("Product added successfully");
   } catch (error) {
     console.error("Error adding product:", error);

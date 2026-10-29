@@ -3,14 +3,14 @@ import axios from "axios";
 const apiBaseUrl = "http://localhost:3000";
 
 export function getProduct() {
-  return axios.get(`${apiBaseUrl}/add_product`);
+  return axios.get(`${apiBaseUrl}/add_product`);//
 }// This function sends a GET request to the backend to retrieve the list of products.
 
 export function adminAddProductAxiosFunction(data) {
   return axios.post(`${apiBaseUrl}/add_product`, data);
 }
 
-export function adminUpdateProductAxiosFunction(data) {
+export function adminUpdateProductAxiosFunction(data) { //
   return axios.put(`${apiBaseUrl}/add_product/update`, data);
 }
 

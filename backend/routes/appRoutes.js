@@ -17,9 +17,9 @@ import {
   updateOrderStatus,
 } from "../controllers/appController.js";
 
-const router = express.Router();//create router object to define routes for handling various API requests related to customers, admins, reservations, orders, feedback, and complaints. Each route is associated with a specific controller function that handles the corresponding request.
+const router = express.Router();// Connect API routes to their controller functions.
 
-router.post("/customers", signupCustomer);
+router.post("/customers", signupCustomer); // Handle customer signup requests.
 router.post("/customers/login", loginCustomer);
 router.post("/admins", signupAdmin);
 router.post("/admins/login", loginAdmin);

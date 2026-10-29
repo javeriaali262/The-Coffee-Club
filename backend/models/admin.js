@@ -9,3 +9,6 @@ const adminSchema = new mongoose.Schema({
 
 export default mongoose.model("Admin", adminSchema);
 // This code defines a Mongoose schema for the "Admin" model.
+
+
+//data ko database me save karne ke liye model ka use kiya hy or structure define krta hy model
